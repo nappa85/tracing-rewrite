@@ -209,9 +209,7 @@ mod tests {
     #[test]
     fn miri_tracing() {
         init_tracing(|metadata| {
-            (metadata
-                .file()
-                .is_some_and(|file| file.contains("/tracing-rewrite/"))
+            (dbg!(metadata.file()).is_some_and(|file| file == "src/lib.rs")
                 && Level::ERROR.eq(metadata.level()))
             .then_some(Level::WARN)
         })
