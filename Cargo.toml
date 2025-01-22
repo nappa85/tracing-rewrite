@@ -1,0 +1,17 @@
+[package]
+name = "tracing-rewrite"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["tracing_std"]
+tracing_std = ["tracing/std"]
+i_really_want_memory_leak = []
+
+[dependencies]
+tracing = "0.1"
+tracing-core = "0.1"
+tracing-subscriber = "0.3"
+
+[dev-dependencies]
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
