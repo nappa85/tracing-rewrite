@@ -2,6 +2,17 @@
 name = "tracing-rewrite"
 version = "0.1.0"
 edition = "2021"
+description = "Tracing logs conditional rewrite wrapper"
+license = "WTFPL"
+repository = "https://github.com/nappa85/tracing-rewrite"
+readme = "README.md"
+categories = [
+    "development-tools::debugging",
+    "development-tools::profiling",
+    "asynchronous",
+    "no-std",
+]
+keywords = ["logging", "tracing", "metrics", "async"]
 
 [features]
 default = ["tracing_std"]
